@@ -3,7 +3,7 @@ import rerun as rr
 from typing import List
 import numpy as np
 
-import rr_helpers as rrh
+import leetcode_rerun.rr_helpers as rrh
 
 
 class Solution:
