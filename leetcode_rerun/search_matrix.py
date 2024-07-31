@@ -12,15 +12,14 @@ class Solution:
         # return
         rows = [m[0] for m in matrix]
 
-
         row = self.search_lin(rows, target)
         print("row", row)
-        rrh.log_list("row",matrix[row])
+        rrh.log_list("row", matrix[row])
         if matrix[row][0] == target:
             return True
         col = self.search_lin(matrix[row], target)
         print("col", col)
-        rrh.log_list("col",row)
+        rrh.log_list("col", row)
 
         if matrix[row][col] == target:
             return True
