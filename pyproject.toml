@@ -1,5 +1,5 @@
 [project]
-name = "python_template"
+name = "leetcode_rerun"
 version = "0.2.0"
 authors = [{ name = "Austin Gregg-Smith", email = "blooop@gmail.com" }]
 description = "A python package template"
@@ -26,7 +26,7 @@ pypi-dependencies = { deps-rocker = ">=0.2" }
 tasks = { code = "scripts/launch_vscode.sh",code-nocache = "scripts/launch_vscode.sh --nocache" }
 
 [tool.pixi.pypi-dependencies]
-python_template = { path = ".", editable = true }
+leetcode_rerun = { path = ".", editable = true }
 
 [project.optional-dependencies]
 test = [
@@ -40,15 +40,15 @@ test = [
 ]
 
 [project.urls]
-Source = "https://github.com/blooop/python_template"
-Home = "https://github.com/blooop/python_template"
+Source = "https://github.com/blooop/leetcode_rerun"
+Home = "https://github.com/blooop/leetcode_rerun"
 
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-include= ["python_template"]
+include= ["leetcode_rerun"]
 
 # Environments
 [tool.pixi.environments]
