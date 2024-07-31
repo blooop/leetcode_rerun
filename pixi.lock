@@ -538,6 +538,20 @@ packages:
   purls: []
   size: 707602
   timestamp: 1718625640445
+- kind: pypi
+  name: leetcode-rerun
+  version: 0.2.0
+  path: .
+  sha256: ad13e2343c3b52a4fd3e6af63931c1cd17a2103212fe66628a59aa6738306848
+  requires_dist:
+  - black>=23,<=24.4.2 ; extra == 'test'
+  - pylint>=3.2.5,<=3.2.6 ; extra == 'test'
+  - pytest-cov>=4.1,<=5.0.0 ; extra == 'test'
+  - pytest>=7.4,<=8.3.2 ; extra == 'test'
+  - hypothesis>=6.104.2,<=6.108.5 ; extra == 'test'
+  - ruff>=0.5.0,<=0.5.5 ; extra == 'test'
+  - coverage>=7.5.4,<=7.6.0 ; extra == 'test'
+  editable: true
 - kind: conda
   name: libexpat
   version: 2.6.2
@@ -964,20 +978,6 @@ packages:
   purls: []
   size: 32073625
   timestamp: 1718621771849
-- kind: pypi
-  name: python-template
-  version: 0.2.0
-  path: .
-  sha256: affcd0c32e71962e9e4d3157f54e2cabb3e9c12330086cd48d70f6fa9fc95bf9
-  requires_dist:
-  - black>=23,<=24.4.2 ; extra == 'test'
-  - pylint>=3.2.5,<=3.2.6 ; extra == 'test'
-  - pytest-cov>=4.1,<=5.0.0 ; extra == 'test'
-  - pytest>=7.4,<=8.3.2 ; extra == 'test'
-  - hypothesis>=6.104.2,<=6.108.5 ; extra == 'test'
-  - ruff>=0.5.0,<=0.5.5 ; extra == 'test'
-  - coverage>=7.5.4,<=7.6.0 ; extra == 'test'
-  editable: true
 - kind: pypi
   name: pyyaml
   version: 6.0.1
