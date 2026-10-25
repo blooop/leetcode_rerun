@@ -21,7 +21,6 @@ def log_list(path: str, lst: List[Any], ptr_list: List[int] = None):
         rr.log(path, rr.Boxes2D(centers=points, sizes=[1, 1] * len(lst)))
 
         if ptr_list is not None:
-
             rr.log(f"{path}", rr.Boxes2D(centers=points, sizes=[1, 1] * len(lst)))
 
     # if ptr_list is not None:
