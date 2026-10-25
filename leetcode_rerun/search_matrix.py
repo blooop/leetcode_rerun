@@ -19,10 +19,7 @@ class Solution:
         print("col", col)
         rrh.log_list("col", row)
 
-        if matrix[row][col] == target:
-            return True
-
-        return False
+        return matrix[row][col] == target
 
     def search_lin(self, lst, target):
         left = 0

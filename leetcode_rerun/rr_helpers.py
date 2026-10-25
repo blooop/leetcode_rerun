@@ -15,7 +15,7 @@ def log_mat(path: str, matrix: list[list[Any]]):
     rr.log(path, rr.Boxes2D(centers=points, sizes=[1, 1] * len(points)))
 
 
-def log_list(path: str, lst: list[Any], ptr_list: list[int] = None):
+def log_list(path: str, lst: list[Any], ptr_list: list[int] | None = None):
     if isinstance(lst, Iterable):
         points = list(range(len(lst)))
         rr.log(f"{path}/data", rr.Points2D(points, labels=lst))
