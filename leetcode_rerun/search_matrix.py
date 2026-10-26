@@ -1,13 +1,11 @@
-import rerun as rr
-
-from typing import List
 import numpy as np
+import rerun as rr
 
 import leetcode_rerun.rr_helpers as rrh
 
 
 class Solution:
-    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+    def searchMatrix(self, matrix: list[list[int]], target: int) -> bool:
         rrh.log_mat("/", matrix)
         # return
         rows = [m[0] for m in matrix]
@@ -21,10 +19,7 @@ class Solution:
         print("col", col)
         rrh.log_list("col", row)
 
-        if matrix[row][col] == target:
-            return True
-
-        return False
+        return matrix[row][col] == target
 
     def search_lin(self, lst, target):
         left = 0

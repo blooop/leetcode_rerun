@@ -1,9 +1,10 @@
-import rerun as rr
-from typing import List, Any
 from collections.abc import Iterable
+from typing import Any
+
+import rerun as rr
 
 
-def log_mat(path: str, matrix: List[List[Any]]):
+def log_mat(path: str, matrix: list[list[Any]]):
     points = []
     labels = []
     for i in range(len(matrix)):
@@ -14,7 +15,7 @@ def log_mat(path: str, matrix: List[List[Any]]):
     rr.log(path, rr.Boxes2D(centers=points, sizes=[1, 1] * len(points)))
 
 
-def log_list(path: str, lst: List[Any], ptr_list: List[int] = None):
+def log_list(path: str, lst: list[Any], ptr_list: list[int] | None = None):
     if isinstance(lst, Iterable):
         points = list(range(len(lst)))
         rr.log(f"{path}/data", rr.Points2D(points, labels=lst))
