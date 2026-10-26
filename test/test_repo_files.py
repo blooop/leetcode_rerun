@@ -14,3 +14,12 @@ def test_deps_yaml_scripts_exist():
             elif in_scripts and (m := re.match(r"^\s*-\s*(\S+)", line)):
                 assert (REPO / m.group(1)).is_file(), f"{deps.name} lists missing {m.group(1)}"
 
+
+def test_dependabot_docker_dirs_have_a_dockerfile():
+    """Dependabot reports a missing dependency file for a docker entry with no Dockerfile."""
+    config = (REPO / ".github" / "dependabot.yml").read_text(encoding="utf-8")
+    entries = re.findall(
+        r'package-ecosystem:\s*"?docker"?\s*\n\s*directory:\s*"?([^"\n]+)"?', config
+    )
+    for directory in entries:
+        assert (REPO / directory.lstrip("/") / "Dockerfile").is_file(), directory
